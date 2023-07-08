@@ -16,7 +16,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   dropdown_model_list: ^0.0.3+2
   drop_down_data: ^1.0.5
-
+  dropdown_button2: ^2.3.4
+  page_view_dot_indicator: ^2.0.0
+  smooth_page_indicator: ^1.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -29,6 +31,7 @@ flutter:
   assets:
     - assets/getstarted/
     - assets/page 2/
+    - assets/icons/
   uses-material-design: true
 
 

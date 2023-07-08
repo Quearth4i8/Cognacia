@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../colors.dart';
-import 'loginpage.dart';
+import '../tools/colors.dart';
+import 'CreateAccontPage1.dart';
 
 class getstarted extends StatelessWidget {
   @override
@@ -130,7 +130,25 @@ class getstarted extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                    pageBuilder: (context, animation, secondaryAnimation) =>
+                        createaccountpage1(),
+                    transitionsBuilder:
+                        (context, animation, secondaryAnimation, child) {
+                      return SlideTransition(
+                        position: Tween<Offset>(
+                          begin: const Offset(1.0, 0.0),
+                          end: Offset.zero,
+                        ).animate(animation),
+                        child: child,
+                      );
+                    },
+                  ),
+                );
+                  },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0),
@@ -154,14 +172,14 @@ class getstarted extends StatelessWidget {
           ),
           Positioned(
             top: 620,
-            left: 329.5,
+            left: 318.5,
             child: GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
                   PageRouteBuilder(
                     pageBuilder: (context, animation, secondaryAnimation) =>
-                        LoginPage(),
+                        createaccountpage1(),
                     transitionsBuilder:
                         (context, animation, secondaryAnimation, child) {
                       return SlideTransition(
