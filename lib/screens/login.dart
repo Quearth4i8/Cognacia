@@ -1,10 +1,15 @@
+// ignore_for_file: camel_case_types, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 import '../tools/colors.dart';
-import 'CreateAccontPage1.dart';
-import 'CreateAccountPage4.dart';
+import 'app_core/home.dart';
+import 'CreateAccount/CreateAccontPage1.dart';
+import 'ResetPassword/ResetPassword1.dart';
 
 class login extends StatefulWidget {
+  const login({super.key});
+
   @override
   _login createState() => _login();
 }
@@ -34,8 +39,8 @@ class _login extends State<login> {
             children: [
               Container(
                 alignment: Alignment.topCenter,
-                padding: EdgeInsets.only(top: 100.0, bottom: 20.0),
-                child: Text(
+                padding: const EdgeInsets.only(top: 100.0, bottom: 20.0),
+                child: const Text(
                   'Welcome Back !',
                   style: TextStyle(
                     fontSize: 24,
@@ -55,15 +60,15 @@ class _login extends State<login> {
                 ),
                 child: TextField(
                   controller: namecontroller,
-                  style: TextStyle(color: Colors.white), // the text color to
+                  style: const TextStyle(color: Colors.white), // the text color to
                   decoration: InputDecoration(
                     labelText: "username",
-                    labelStyle: TextStyle(color: Colors.white),
+                    labelStyle: const TextStyle(color: Colors.white),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     contentPadding:
-                        EdgeInsets.only(left: 18.0, top: 18, bottom: 20),
+                        const EdgeInsets.only(left: 18.0, top: 18, bottom: 20),
                     prefixIcon: Image.asset(
                       'assets/icons/user.png',
                       color: Colors.white,
@@ -84,17 +89,17 @@ class _login extends State<login> {
                   children: [
                     TextField(
                       controller: passwordcontroller,
-                      style: TextStyle(color: Colors.white), // the text color
+                      style: const TextStyle(color: Colors.white), // the text color
                       obscureText:
                           !isPasswordVisible, // Set the obscureText property
                       decoration: InputDecoration(
                         labelText: "password",
-                        labelStyle: TextStyle(color: Colors.white),
+                        labelStyle: const TextStyle(color: Colors.white),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         contentPadding:
-                            EdgeInsets.only(left: 18.0, top: 18, bottom: 20),
+                            const EdgeInsets.only(left: 18.0, top: 18, bottom: 20),
                         prefixIcon: Image.asset(
                           'assets/icons/lock.png',
                           color: Colors.white,
@@ -126,14 +131,32 @@ class _login extends State<login> {
               Padding(
                 padding: const EdgeInsets.only(left: 230.0, top: 10),
                 child: InkWell(
-                  child: Text("forgot password ?",
+                  child: const Text("forgot password ?",
                       style: TextStyle(
                         fontFamily: 'CircularStd',
                         fontWeight: FontWeight.bold,
                         fontSize: 14.0,
                         color: Colors.white,
                       )),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          const ResetPassword1(),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                        return SlideTransition(
+                          position: Tween<Offset>(
+                            begin: const Offset(1.0, 0.0),
+                            end: Offset.zero,
+                          ).animate(animation),
+                          child: child,
+                        );
+                      },
+                    ),
+                  );
+                  },
                 ),
               ),
               Container(
@@ -145,7 +168,7 @@ class _login extends State<login> {
                     context,
                     PageRouteBuilder(
                       pageBuilder: (context, animation, secondaryAnimation) =>
-                          createaccountpage4(),
+                           const Home(),
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) {
                         return SlideTransition(
@@ -185,10 +208,10 @@ class _login extends State<login> {
               ),
               Center(
                 child: Container(
-                  margin: EdgeInsets.only(left: 100),
+                  margin: const EdgeInsets.only(left: 100),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         "Don't have an account ?",
                         style: TextStyle(color: Colors.white),
                       ),
@@ -211,7 +234,7 @@ class _login extends State<login> {
                             PageRouteBuilder(
                               pageBuilder:
                                   (context, animation, secondaryAnimation) =>
-                                      createaccountpage1(),
+                                      const createaccountpage1(),
                               transitionsBuilder: (context, animation,
                                   secondaryAnimation, child) {
                                 return SlideTransition(

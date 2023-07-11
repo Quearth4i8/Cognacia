@@ -1,9 +1,13 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 
 import '../tools/colors.dart';
-import 'CreateAccontPage1.dart';
+import 'CreateAccount/CreateAccontPage1.dart';
 
 class getstarted extends StatelessWidget {
+  const getstarted({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -135,7 +139,7 @@ class getstarted extends StatelessWidget {
                   context,
                   PageRouteBuilder(
                     pageBuilder: (context, animation, secondaryAnimation) =>
-                        createaccountpage1(),
+                        const createaccountpage1(),
                     transitionsBuilder:
                         (context, animation, secondaryAnimation, child) {
                       return SlideTransition(
@@ -179,7 +183,7 @@ class getstarted extends StatelessWidget {
                   context,
                   PageRouteBuilder(
                     pageBuilder: (context, animation, secondaryAnimation) =>
-                        createaccountpage1(),
+                        const createaccountpage1(),
                     transitionsBuilder:
                         (context, animation, secondaryAnimation, child) {
                       return SlideTransition(

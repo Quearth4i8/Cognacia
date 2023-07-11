@@ -1,12 +1,16 @@
+// ignore_for_file: file_names, camel_case_types, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/login.dart';
 import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 
-import '../tools/colors.dart';
-import '../utils/customdropdown.dart';
+import '../../tools/colors.dart';
+import '../../utils/customdropdown.dart';
 import 'CreateAccountPage2.dart';
 
 class createaccountpage1 extends StatefulWidget {
+  const createaccountpage1({super.key});
+
   @override
   _createaccountpage1 createState() => _createaccountpage1();
 }
@@ -32,8 +36,8 @@ class _createaccountpage1 extends State<createaccountpage1> {
           children: [
             Container(
               alignment: Alignment.topCenter,
-              padding: EdgeInsets.only(top: 100.0, bottom: 20.0),
-              child: Text(
+              padding: const EdgeInsets.only(top: 100.0, bottom: 20.0),
+              child: const Text(
                 'Create Account',
                 style: TextStyle(
                   fontSize: 24,
@@ -46,10 +50,10 @@ class _createaccountpage1 extends State<createaccountpage1> {
               height: 70,
             ),
             Container(
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
               decoration: BoxDecoration(
                 color: AppColors.greenie,
-                borderRadius: BorderRadius.all(Radius.circular(16)),
+                borderRadius: const BorderRadius.all(Radius.circular(16)),
               ),
               child: CustomDropdownButton(
                 items: genderItems,
@@ -77,7 +81,7 @@ class _createaccountpage1 extends State<createaccountpage1> {
                   context,
                   PageRouteBuilder(
                     pageBuilder: (context, animation, secondaryAnimation) =>
-                        createaccountpage2(),
+                        const createaccountpage2(),
                     transitionsBuilder:
                         (context, animation, secondaryAnimation, child) {
                       return SlideTransition(
@@ -127,10 +131,10 @@ class _createaccountpage1 extends State<createaccountpage1> {
             ),
             Center(
               child: Container(
-                margin: EdgeInsets.only(left: 100),
+                margin: const EdgeInsets.only(left: 100),
                 child: Row(
                   children: [
-                    Text(
+                    const Text(
                       "Already have an account ?",
                       style: TextStyle(color: Colors.white),
                     ),
@@ -147,22 +151,9 @@ class _createaccountpage1 extends State<createaccountpage1> {
                           )),
                       onTap: () {
                         Navigator.push(
-                  context,
-                  PageRouteBuilder(
-                    pageBuilder: (context, animation, secondaryAnimation) =>
-                        login(),
-                    transitionsBuilder:
-                        (context, animation, secondaryAnimation, child) {
-                      return SlideTransition(
-                        position: Tween<Offset>(
-                          begin: const Offset(1.0, 0.0),
-                          end: Offset.zero,
-                        ).animate(animation),
-                        child: child,
-                      );
-                    },
-                  ),
-                );
+                            context,
+                            MaterialPageRoute(builder: (context) => const login()),
+                          );
                       },
                     ),
                   ],

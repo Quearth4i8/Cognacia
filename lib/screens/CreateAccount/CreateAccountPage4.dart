@@ -1,9 +1,14 @@
+// ignore_for_file: file_names, camel_case_types, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 
-import '../tools/colors.dart';
+import '../../tools/colors.dart';
+import '../login.dart';
 
 class createaccountpage4 extends StatefulWidget {
+  const createaccountpage4({super.key});
+
   @override
   _createaccountpage4 createState() => _createaccountpage4();
 }
@@ -29,8 +34,8 @@ class _createaccountpage4 extends State<createaccountpage4> {
           children: [
             Container(
               alignment: Alignment.topCenter,
-              padding: EdgeInsets.only(top: 100.0, bottom: 20.0),
-              child: Text(
+              padding: const EdgeInsets.only(top: 100.0, bottom: 20.0),
+              child: const Text(
                 'Almost Done !',
                 style: TextStyle(
                   fontSize: 24,
@@ -43,29 +48,25 @@ class _createaccountpage4 extends State<createaccountpage4> {
               height: 70,
             ),
             
-            Container(
-              child: Column(
-                children: [
-                  Center(
-                    child: Text(
-                      "Please check your E-mail for confirming",style: TextStyle(fontSize: 16,color: Colors.white),
-                    ),
+            const Column(
+              children: [
+                Center(
+                  child: Text(
+                    "Please check your E-mail for confirming",style: TextStyle(fontSize: 16,color: Colors.white),
                   ),
-                  Center(
-                    child: Text(
-                      "your signup...",style: TextStyle(fontSize: 16,color: Colors.white),
-                    ),
+                ),
+                Center(
+                  child: Text(
+                    "your signup...",style: TextStyle(fontSize: 16,color: Colors.white),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             Container(height: 70,),
-            Container(
-              child:Image.asset(
+            Image.asset(
         'assets/page 2/smstracking.png',
         color: Colors.white,
       ),
-            ),
             Container(
               height: 50,
             ),
@@ -107,10 +108,10 @@ class _createaccountpage4 extends State<createaccountpage4> {
             ),
             Center(
               child: Container(
-                margin: EdgeInsets.only(left: 100),
+                margin: const EdgeInsets.only(left: 100),
                 child: Row(
                   children: [
-                    Text(
+                    const Text(
                       "Already have an account ?",
                       style: TextStyle(color: Colors.white),
                     ),
@@ -125,7 +126,12 @@ class _createaccountpage4 extends State<createaccountpage4> {
                             fontSize: 14.0,
                             color: AppColors.lightgreenie,
                           )),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>const login()),
+                          );
+                      },
                     ),
                   ],
                 ),

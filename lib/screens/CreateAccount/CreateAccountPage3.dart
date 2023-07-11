@@ -1,10 +1,15 @@
+// ignore_for_file: camel_case_types, library_private_types_in_public_api, file_names
+
 import 'package:flutter/material.dart';
 import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 
-import '../tools/colors.dart';
+import '../../tools/colors.dart';
+import '../login.dart';
 import 'CreateAccountPage4.dart';
 
 class createaccountpage3 extends StatefulWidget {
+  const createaccountpage3({super.key});
+
   @override
   _createaccountpage3 createState() => _createaccountpage3();
 }
@@ -32,8 +37,8 @@ class _createaccountpage3 extends State<createaccountpage3> {
             children: [
               Container(
                 alignment: Alignment.topCenter,
-                padding: EdgeInsets.only(top: 100.0, bottom: 20.0),
-                child: Text(
+                padding: const EdgeInsets.only(top: 100.0, bottom: 20.0),
+                child: const Text(
                   'Create Account',
                   style: TextStyle(
                     fontSize: 24,
@@ -57,11 +62,11 @@ class _createaccountpage3 extends State<createaccountpage3> {
     controller: namecontroller,
     decoration: InputDecoration(
       labelText: "password",
-      labelStyle: TextStyle(color: Colors.white),
+      labelStyle: const TextStyle(color: Colors.white),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16.0),
       ),
-      contentPadding: EdgeInsets.only(left: 18.0, top: 18, bottom: 20),
+      contentPadding: const EdgeInsets.only(left: 18.0, top: 18, bottom: 20),
       prefixIcon: Image.asset(
         'assets/icons/lock.png',
         color: Colors.white,
@@ -83,11 +88,11 @@ class _createaccountpage3 extends State<createaccountpage3> {
     controller: namecontroller,
     decoration: InputDecoration(
       labelText: "Retype password",
-      labelStyle: TextStyle(color: Colors.white),
+      labelStyle: const TextStyle(color: Colors.white),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16.0),
       ),
-      contentPadding: EdgeInsets.only(left: 18.0, top: 18, bottom: 20),
+      contentPadding: const EdgeInsets.only(left: 18.0, top: 18, bottom: 20),
       prefixIcon: Image.asset(
         'assets/icons/lock.png',
         color: Colors.white,
@@ -104,7 +109,7 @@ class _createaccountpage3 extends State<createaccountpage3> {
                   context,
                   PageRouteBuilder(
                     pageBuilder: (context, animation, secondaryAnimation) =>
-                        createaccountpage4(),
+                        const createaccountpage4(),
                     transitionsBuilder:
                         (context, animation, secondaryAnimation, child) {
                       return SlideTransition(
@@ -154,10 +159,10 @@ class _createaccountpage3 extends State<createaccountpage3> {
               ),
               Center(
                 child: Container(
-                  margin: EdgeInsets.only(left: 100),
+                  margin: const EdgeInsets.only(left: 100),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         "Already have an account ?",
                         style: TextStyle(color: Colors.white),
                       ),
@@ -172,7 +177,12 @@ class _createaccountpage3 extends State<createaccountpage3> {
                               fontSize: 14.0,
                               color: AppColors.lightgreenie,
                             )),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>const login()),
+                          );
+                        },
                       ),
                     ],
                   ),

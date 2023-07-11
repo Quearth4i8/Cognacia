@@ -1,11 +1,16 @@
+// ignore_for_file: file_names, camel_case_types, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 
-import '../tools/colors.dart';
-import '../utils/customdropdown.dart';
+import '../../tools/colors.dart';
+import '../../utils/customdropdown.dart';
+import '../login.dart';
 import 'CreateAccountPage3.dart';
 
 class createaccountpage2 extends StatefulWidget {
+  const createaccountpage2({super.key});
+
   @override
   _createaccountpage2 createState() => _createaccountpage2();
 }
@@ -32,8 +37,8 @@ class _createaccountpage2 extends State<createaccountpage2> {
             children: [
               Container(
                 alignment: Alignment.topCenter,
-                padding: EdgeInsets.only(top: 100.0, bottom: 20.0),
-                child: Text(
+                padding: const EdgeInsets.only(top: 100.0, bottom: 20.0),
+                child: const Text(
                   'Create Account',
                   style: TextStyle(
                     fontSize: 24,
@@ -45,8 +50,7 @@ class _createaccountpage2 extends State<createaccountpage2> {
               Container(
                 height: 50,
               ),
-              Container(
-                  child: Column(
+              Column(
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 30.0),
@@ -63,11 +67,11 @@ class _createaccountpage2 extends State<createaccountpage2> {
                             controller: namecontroller,
                             decoration: InputDecoration(
                               labelText: "First Name",
-                              labelStyle: TextStyle(color: Colors.white),
+                              labelStyle: const TextStyle(color: Colors.white),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
-                              contentPadding: EdgeInsets.only(
+                              contentPadding: const EdgeInsets.only(
                                   left: 18.0, top: 18, bottom: 20),
                             ),
                           ),
@@ -86,11 +90,11 @@ class _createaccountpage2 extends State<createaccountpage2> {
                             controller: namecontroller,
                             decoration: InputDecoration(
                               labelText: "Last Name",
-                              labelStyle: TextStyle(color: Colors.white),
+                              labelStyle: const TextStyle(color: Colors.white),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
-                              contentPadding: EdgeInsets.only(
+                              contentPadding: const EdgeInsets.only(
                                   left: 18.0, top: 18, bottom: 20),
                             ),
                           ),
@@ -111,12 +115,12 @@ class _createaccountpage2 extends State<createaccountpage2> {
                       controller: namecontroller,
                       decoration: InputDecoration(
                         labelText: "Email",
-                        labelStyle: TextStyle(color: Colors.white),
+                        labelStyle: const TextStyle(color: Colors.white),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16.0),
                         ),
-                        contentPadding:
-                            EdgeInsets.only(left: 18.0, top: 18, bottom: 20),
+                        contentPadding: const EdgeInsets.only(
+                            left: 18.0, top: 18, bottom: 20),
                         prefixIcon: const Icon(
                           Icons.mail,
                           color: Colors.white,
@@ -137,12 +141,12 @@ class _createaccountpage2 extends State<createaccountpage2> {
                       controller: namecontroller,
                       decoration: InputDecoration(
                         labelText: "Phone",
-                        labelStyle: TextStyle(color: Colors.white),
+                        labelStyle: const TextStyle(color: Colors.white),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16.0),
                         ),
-                        contentPadding:
-                            EdgeInsets.only(left: 18.0, top: 18, bottom: 20),
+                        contentPadding: const EdgeInsets.only(
+                            left: 18.0, top: 18, bottom: 20),
                         prefixIcon: const Icon(
                           Icons.phone,
                           color: Colors.white,
@@ -154,10 +158,10 @@ class _createaccountpage2 extends State<createaccountpage2> {
                     height: 20,
                   ),
                   Container(
-                    margin: EdgeInsets.only(left: 30, right: 30),
+                    margin: const EdgeInsets.only(left: 30, right: 30),
                     decoration: BoxDecoration(
                       color: AppColors.greenie,
-                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                      borderRadius: const BorderRadius.all(Radius.circular(16)),
                     ),
                     child: CustomDropdownButton(
                       items: genderItems,
@@ -189,12 +193,12 @@ class _createaccountpage2 extends State<createaccountpage2> {
                       controller: namecontroller,
                       decoration: InputDecoration(
                         labelText: "establishment",
-                        labelStyle: TextStyle(color: Colors.white),
+                        labelStyle: const TextStyle(color: Colors.white),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16.0),
                         ),
-                        contentPadding:
-                            EdgeInsets.only(left: 18.0, top: 18, bottom: 20),
+                        contentPadding: const EdgeInsets.only(
+                            left: 18.0, top: 18, bottom: 20),
                         prefixIcon: const Icon(
                           Icons.apartment,
                           color: Colors.white,
@@ -220,11 +224,11 @@ class _createaccountpage2 extends State<createaccountpage2> {
                             controller: namecontroller,
                             decoration: InputDecoration(
                               labelText: "Field",
-                              labelStyle: TextStyle(color: Colors.white),
+                              labelStyle: const TextStyle(color: Colors.white),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
-                              contentPadding: EdgeInsets.only(
+                              contentPadding: const EdgeInsets.only(
                                   left: 18.0, top: 18, bottom: 20),
                             ),
                           ),
@@ -243,11 +247,11 @@ class _createaccountpage2 extends State<createaccountpage2> {
                             controller: namecontroller,
                             decoration: InputDecoration(
                               labelText: "Class",
-                              labelStyle: TextStyle(color: Colors.white),
+                              labelStyle: const TextStyle(color: Colors.white),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
-                              contentPadding: EdgeInsets.only(
+                              contentPadding: const EdgeInsets.only(
                                   left: 18.0, top: 18, bottom: 20),
                             ),
                           ),
@@ -256,30 +260,30 @@ class _createaccountpage2 extends State<createaccountpage2> {
                     ),
                   ),
                 ],
-              )),
+              ),
               Container(
                 height: 25,
               ),
               GestureDetector(
                 onTap: () {
-                Navigator.push(
-                  context,
-                  PageRouteBuilder(
-                    pageBuilder: (context, animation, secondaryAnimation) =>
-                        createaccountpage3(),
-                    transitionsBuilder:
-                        (context, animation, secondaryAnimation, child) {
-                      return SlideTransition(
-                        position: Tween<Offset>(
-                          begin: const Offset(1.0, 0.0),
-                          end: Offset.zero,
-                        ).animate(animation),
-                        child: child,
-                      );
-                    },
-                  ),
-                );
-              },
+                  Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          const createaccountpage3(),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                        return SlideTransition(
+                          position: Tween<Offset>(
+                            begin: const Offset(1.0, 0.0),
+                            end: Offset.zero,
+                          ).animate(animation),
+                          child: child,
+                        );
+                      },
+                    ),
+                  );
+                },
                 child: Container(
                   width: 345,
                   margin: const EdgeInsets.all(30),
@@ -316,10 +320,10 @@ class _createaccountpage2 extends State<createaccountpage2> {
               ),
               Center(
                 child: Container(
-                  margin: EdgeInsets.only(left: 100),
+                  margin: const EdgeInsets.only(left: 100),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         "Already have an account ?",
                         style: TextStyle(color: Colors.white),
                       ),
@@ -334,7 +338,12 @@ class _createaccountpage2 extends State<createaccountpage2> {
                               fontSize: 14.0,
                               color: AppColors.lightgreenie,
                             )),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>const login()),
+                          );
+                        },
                       ),
                     ],
                   ),
